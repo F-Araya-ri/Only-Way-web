@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Only-Way - About Us</title>
+  <link rel="icon" href="IMG/ICON.png" type="image/png">
+  <link rel="preload" as="image" href="IMG/ow_espalda1.png">
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#9a1309",
+            "primary-dark": "#D60C24",
+            "background-light": "#f8f6f5",
+            "background-alt": "#e0e0e0",
+            "background-dark": "#1f1f1f",
+            "dark-charcoal": "#2c2c2c",
+            "light-charcoal": "#4a4a4a",
+          },
+          fontFamily: {
+            display: ["Lexend", "sans-serif"],
+            body: ["Noto Sans", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "1rem",
+            "2xl": "1.5rem",
+            "3xl": "2rem",
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+        .perspective-1000 {
+          perspective: 1000px;
+        }
+      }
+    </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden selection:bg-primary selection:text-white">
+  <div class="relative min-h-screen flex flex-col">
+    <nav id="main-nav"
+      class="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-[#f5f0f0] dark:border-[#332222] h-20 flex items-center transition-all duration-300">
+      <div class="flex justify-center w-full px-4 md:px-10 lg:px-40 py-3">
+        <div class="flex w-full max-w-[960px] items-center justify-between">
+          <div class="flex items-center h-20 md:h-20 lg:h-24">
+            <img id="nav-logo" src="IMG/only-way_Rojo.png" alt="Logo Only-Way"
+              class="h-[120px] w-auto object-contain transition-all duration-300" />
+          </div>
+
+          <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+            <div class="flex items-center gap-6">
+              <a class="text-md font-medium hover:text-primary transition-colors text-[#181111] dark:text-gray-200"
+                href="index.html">Inicio</a>
+              <a class="text-md font-medium hover:text-primary transition-colors text-[#181111] dark:text-gray-200"
+                href="index.html#Colección">Productos</a>
+            </div>
+            <a class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-red-800 transition-colors text-white text-sm font-bold shadow-md"
+              href="Contacto.html"><span class="truncate">Contáctanos</span></a>
+          </div>
+          <button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2">
+            <span class="material-symbols-outlined text-3xl text-[#181111] dark:text-white">menu</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[100] invisible transition-all duration-300">
+      <div id="menu-overlay"
+        class="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+
+      <div id="menu-panel"
+        class="absolute right-0 top-0 h-full w-[70%] max-w-[300px] bg-white dark:bg-[#1a0f0f] shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <div class="flex items-center justify-between p-6 border-b border-gray-100 dark:border-white/10">
+          <img src="IMG/only-way_Rojo.png" alt="Logo" class="h-20 w-auto object-contain" />
+          <button id="close-menu" class="p-2 text-gray-500">
+            <span class="material-symbols-outlined text-2xl">close</span>
+          </button>
+        </div>
+
+        <nav class="flex flex-col p-6 gap-4">
+          <a class="flex items-center gap-4 text-xl font-bold text-[#181111] dark:text-white" href="index.html">
+            <span class="material-symbols-outlined text-primary">home</span> Inicio
+          </a>
+          <div class="relative group">
+                        <button class="flex items-center gap-4 text-xl font-bold text-[#181111] dark:text-white">
+                            <span class="material-symbols-outlined text-primary">loyalty</span> Productos</button>
+
+                        <!-- Panel -->
+                        <div
+                            class="absolute left-0 mt-2 hidden w-40 rounded-md bg-background-light shadow-lg ring-1 ring-black/5 group-hover:block">
+                            <a href="Colección_Mujer.html"
+                                class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white">
+                                Colección Mujer
+
+                            </a>
+                            <a href="Colección_Hombre.html"
+                                class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white">
+                                Colección Hombre
+
+                            </a>
+                            <a href="Accesorios.html"
+                                class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white">
+                                Accesorios
+
+                            </a>
+
+                        </div>
+                    </div>
+          <a class="flex items-center justify-center bg-primary text-white py-4 rounded-xl font-bold shadow-lg mt-4"
+            href="Contacto.html">
+            Contáctanos
+          </a>
+  
+
+        </nav>
+      </div>
+    </div>
+    <main class="flex-grow">
+      <div class="relative pt-5 pb-5 lg:pt-5 lg:pb-15 px-6 overflow-hidden bg-background-light dark:bg-background-dark">
+        <div class="absolute top-0 right-0 w-[50%] h-[50%] bg-primary/5 rounded-full blur-[100px] -z-10"></div>
+        <div class="max-w-[1400px] mx-auto">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
+                Since 2013
+              </div>
+              <h1 class="text-5xl lg:text-7xl font-bold tracking-tighter text-slate-900 dark:text-white leading-[1.1]">
+                El deporte es
+                <span
+                  class="text-primary underline decoration-primary/30 underline-offset-4 decoration-4">movimiento</span>,
+                y por eso
+                <span
+                  class="text-primary underline decoration-primary/30 underline-offset-4 decoration-4">nosotros</span>
+                también.
+              </h1>
+              <p class="text-xl text-slate-600 dark:text-neutral-400 leading-relaxed max-w-lg">
+                Nacimos del esfuerzo, la constancia y el deseo de avanzar.
+                Cada prenda te acompaña en el camino hacia tu mejor versión.
+              </p>
+              <div class="flex items-center gap-4 text-slate-600 dark:text-neutral-400 text-lg">
+                <span class="material-symbols-outlined text-primary text-4xl">trending_up</span>
+                <p class="font-semibold">
+                  Más del
+                  <span class="text-primary font-bold">98.5%</span> de
+                  fidelidad de nuestros clientes desde el inicio.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-4 pt-2">
+                <a class="px-8 py-3.5 bg-primary hover:bg-primary-dark text-white font-bold rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300"
+                  href="index.html#Colección">
+                  Explora nuetras prendas
+                </a>
+                <a class="px-8 py-3.5 bg-white dark:bg-dark-charcoal border border-neutral-200 dark:border-light-charcoal hover:border-primary/50 text-slate-900 dark:text-white font-bold rounded-full transition-all duration-300"
+                  href="#Nuestra_historia">
+                  Nuestra Historia
+                </a>
+              </div>
+            </div>
+            <div class="relative h-[600px] lg:h-[700px] flex items-center justify-center">
+              <div class="relative w-full max-w-[480px] space-y-4">
+                <div
+                  class="group relative h-48 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1">
+                  <img alt="High-end athletic fabric close-up"
+                    class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwBuCYoVcNw8ZAP3RjCoR4iI44j2iJnpy5yjCF3CxuVl6gkCdBws-kMG1Kqjc7-8GdRyeaZG8GqwAVI3neUVRyXnd8TelPeiivBoxPeQU7dKoTuzJBAbah6O_8WtPByYPVVNXpCNI0N2aIyPB_IcTxPWNhKrEuk80oj0IjZ0sonddq1O3Prtpx1_fxonHX3LhBIdj5XyEg2mSJawRXtv9n0cNt3DlweX_WW70GFkttS8ZZ2fSbBWCGJf8pw1ZnkHB5Q7p1beAKHsU" />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent dark:from-dark-charcoal/90 dark:via-dark-charcoal/50">
+                  </div>
+                  <div class="absolute inset-0 border border-white/10 rounded-2xl"></div>
+                  <div class="relative h-full flex flex-col justify-center px-8">
+                    <div class="flex items-center gap-3 mb-2">
+                      <span class="w-8 h-[2px] bg-primary"></span>
+                      <span class="text-xs font-bold text-primary uppercase tracking-[0.2em]">Top Tier</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-1">
+                      Nivel superior
+                    </h3>
+                    <p class="text-sm text-neutral-300 max-w-[200px]">
+                      Calidad premium para alto rendimiento.
+                    </p>
+                    <p class="text-xs text-primary/80 mt-1 font-semibold">
+                      "98% de resistencia tras cada desafío"
+                    </p>
+                  </div>
+                  <div
+                    class="absolute top-6 right-8 text-primary opacity-50 group-hover:opacity-100 transition-opacity">
+                    <span class="material-symbols-outlined text-3xl">diamond</span>
+                  </div>
+                </div>
+                <div
+                  class="group relative h-48 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 lg:translate-x-12">
+                  <img alt="Athlete sprinting in motion"
+                    class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    src="IMG/ow_espalda1.png" />
+                  <div class="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/30 to-transparent"></div>
+                  <div class="absolute inset-0 border border-white/10 rounded-2xl"></div>
+                  <div class="relative h-full flex flex-col justify-center px-8">
+                    <div class="flex items-center gap-3 mb-2">
+                      <span class="w-8 h-[2px] bg-white"></span>
+                      <span class="text-xs font-bold text-white/90 uppercase tracking-[0.2em]">NIVEL ÉLITE
+                      </span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-1">
+                      Alto Rendimiento
+                    </h3>
+                    <p class="text-sm text-white/80 max-w-[200px]">
+                      Cada prenda potencia tu desempeño.
+                    </p>
+                    <p class="text-xs text-white/90 mt-1 font-semibold">
+                      "Mejora promedio del 7% en marcas personales"
+                    </p>
+                  </div>
+                  <div class="absolute top-6 right-8 text-white opacity-50 group-hover:opacity-100 transition-opacity">
+                    <span class="material-symbols-outlined text-3xl">bolt</span>
+                  </div>
+                </div>
+                <div
+                  class="group relative h-48 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1">
+                  <img alt="Community of athletes high-fiving"
+                    class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    src="IMG/clientes.jpg" />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent dark:from-dark-charcoal/90 dark:via-dark-charcoal/50">
+                  </div>
+                  <div class="absolute inset-0 border border-white/10 rounded-2xl"></div>
+                  <div class="relative h-full flex flex-col justify-center px-8">
+                    <div class="flex items-center gap-2 mb-2">
+                      <div class="flex">
+                        <span class="material-symbols-outlined text-primary text-xs"
+                          style="font-variation-settings: 'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-xs"
+                          style="font-variation-settings: 'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-xs"
+                          style="font-variation-settings: 'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-xs"
+                          style="font-variation-settings: 'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-xs"
+                          style="font-variation-settings: 'FILL' 1">star</span>
+                      </div>
+                      <span class="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">VERIFICADO</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-1">
+                      Satisfacción Garantizada
+                    </h3>
+                    <p class="text-sm text-neutral-300">
+                      Confirmado por más de 5k clientes .
+                    </p>
+                    <p class="text-xs text-primary/80 mt-1 font-semibold">
+                      "Resistencia que acompaña."
+                    </p>
+                  </div>
+                  <div class="absolute bottom-6 right-8">
+                    <div class="bg-white/10 backdrop-blur-md rounded-lg p-2 border border-white/10">
+                      <span class="text-2xl font-black text-white">99%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-background-alt dark:bg-[#111] py-20 border-y border-neutral-100 dark:border-light-charcoal">
+        <div class="max-w-[1400px] mx-auto px-6">
+          <div class="max-w-2xl mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-900 dark:text-white">
+              Nuestros Principios Esenciales
+            </h2>
+            <p class="text-slate-600 dark:text-neutral-400 text-lg">
+              No solo vendemos ropa deportiva: creamos una filosofía que
+              impulsa tu camino. Cada puntada, cada costura y cada elección de
+              tela está guiada por tres principios que definen quiénes somos.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="bg-white dark:bg-dark-charcoal p-8 rounded-2xl border border-neutral-100 dark:border-light-charcoal hover:border-primary/50 transition-colors group">
+              <div
+                class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
+                <span class="material-symbols-outlined text-3xl">visibility</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">
+                Visión
+              </h3>
+              <p class="text-slate-500 dark:text-neutral-400 leading-relaxed">
+                Liderar la industria nacional de ropa deportiva con calidad,
+                innovación, precios competitivos y servicio excepcional.
+              </p>
+            </div>
+            <div
+              class="bg-white dark:bg-dark-charcoal p-8 rounded-2xl border border-neutral-100 dark:border-light-charcoal hover:border-primary/50 transition-colors group">
+              <div
+                class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
+                <span class="material-symbols-outlined text-3xl">flag</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">
+                Misión
+              </h3>
+              <p class="text-slate-500 dark:text-neutral-400 leading-relaxed">
+                Creamos ropa deportiva exclusiva e innovadora, con calidad,
+                tecnología, servicio excepcional y compromiso ambiental.
+              </p>
+            </div>
+            <div
+              class="bg-white dark:bg-dark-charcoal p-8 rounded-2xl border border-neutral-100 dark:border-light-charcoal hover:border-primary/50 transition-colors group">
+              <div
+                class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
+                <span class="material-symbols-outlined text-3xl">groups</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">
+                Unidos por el deporte
+              </h3>
+              <p class="text-slate-500 dark:text-neutral-400 leading-relaxed">
+                El deporte no existe sin su gente. Creamos vínculos a través
+                del esfuerzo, la determinación y los objetivos compartidos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-10 px-6 max-w-[1400px] mx-auto mb-24" id="Nuestra_historia">
+        <div
+          class="bg-dark-charcoal dark:bg-white text-white dark:text-slate-900 rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden">
+          <div
+            class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-20 rounded-full blur-[100px] pointer-events-none">
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-64 h-64 bg-primary opacity-10 rounded-full blur-[80px] pointer-events-none">
+          </div>
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 relative z-10 items-center">
+            <div>
+              <div class="text-primary font-bold tracking-widest uppercase text-sm mb-4">
+                Nuestra Historia
+              </div>
+              <h2 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+                Nacidos del esfuerzo, guiados por propósito
+              </h2>
+              <div class="space-y-6 text-slate-300 dark:text-slate-600 text-lg leading-relaxed">
+                <p>
+                  Only-Way nació en 2013 con una sola máquina de coser y una
+                  convicción clara: crear ropa deportiva cómoda, de calidad y
+                  accesible. Fundada por Xenia Rivera González y Gerardo Araya
+                  Salgado, el proyecto surgió como una idea de emprendimineto,
+                  pero pronto se convirtió en una oportunidad de impacto.
+                </p>
+                <p>
+                  Lo que comenzó como confección artesanal para amigos y
+                  familiares se transformó en una línea completa de prendas
+                  deportivas, con presencia en gimnasios, tiendas en todo
+                  Costa Rica. Hoy seguimos independientes, enfocados y
+                  obsesionados con cada detalle.
+                </p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+              <div
+                class="bg-white/10 dark:bg-black/5 backdrop-blur-sm p-10 rounded-[2rem] flex flex-col items-center justify-center text-center h-80 border border-white/10 dark:border-black/5 hover:bg-white/15 transition-all duration-300 group">
+                <div class="mb-8 text-primary transition-transform duration-500 group-hover:scale-110">
+                  <span class="material-symbols-outlined text-6xl font-bold text-white opacity-80">loyalty</span>
+                </div>
+                <span class="text-5xl font-extrabold text-primary mb-3">5k+</span>
+                <span class="font-bold text-sm uppercase tracking-[0.2em] opacity-80">Clientes felices</span>
+              </div>
+              <div
+                class="bg-white/10 dark:bg-black/5 backdrop-blur-sm p-10 rounded-[2rem] flex flex-col items-center justify-center text-center h-80 mt-12 border border-white/10 dark:border-black/5 hover:bg-white/15 transition-all duration-300 group">
+                <div class="mb-8 text-primary transition-transform duration-500 group-hover:scale-110">
+                  <span
+                    class="material-symbols-outlined text-6xl font-bold text-white opacity-80">workspace_premium</span>
+                </div>
+                <span class="text-5xl font-extrabold text-primary mb-3">13+</span>
+                <span class="font-bold text-sm uppercase tracking-[0.2em] opacity-80">Años de experiencia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="mt-auto border-t border-neutral-200 dark:border-neutral-800 py-3 bg-white dark:bg-neutral-900">
+      <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center h-20 md:h-20 lg:h-24">
+            <img src="IMG/only-way_Rojo.png" alt="Logo Only-Way" class="h-[120px] w-auto object-contain" />
+          </div>
+        </div>
+        <p class="text-neutral-400 text-sm font-medium">
+          © 2025 Only-Way Sportswear. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script src="menu_movil.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+# Variables de entorno
+.env
+
+# Netlify
+.netlify
+
+# Node
+node_modules
+
+# Logs
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db

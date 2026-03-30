@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Only-Way - Contact Us</title>
+    <link rel="icon" href="IMG/ICON.png" type="image/png">
+    <link rel="preload" as="image" href="IMG/Athletics.jpg">
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "4dymsKFRaUf5y70RC",
+            });
+        })();
+    </script>
+    <script src="Emailsender.js"></script>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#9a1309",
+                        online: "#00f702",
+                        "background-light": "#f8f6f5",
+                    },
+                    fontFamily: {
+                        display: ["Lexend", "sans-serif"],
+                        body: ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden selection:bg-primary selection:text-white">
+    <div class="relative min-h-screen flex flex-col">
+        <nav id="main-nav"
+            class="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-[#f5f0f0] dark:border-[#332222] h-20 flex items-center transition-all duration-300">
+            <div class="flex justify-center w-full px-4 md:px-10 lg:px-40 py-3">
+                <div class="flex w-full max-w-[960px] items-center justify-between">
+                    <div class="flex items-center h-20 md:h-20 lg:h-24">
+                        <img id="nav-logo" src="IMG/only-way_Rojo.png" alt="Logo Only-Way"
+                            class="h-[120px] w-auto object-contain transition-all duration-300" />
+                    </div>
+
+                    <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                        <div class="flex items-center gap-6">
+                            <a class="text-md font-medium hover:text-primary transition-colors text-[#181111] dark:text-gray-200"
+                                href="index.html">Inicio</a>
+                            <a class="text-md font-medium hover:text-primary transition-colors text-[#181111] dark:text-gray-200"
+                                href="index.html#Colección">Productos</a>
+                            <a class="text-md font-medium hover:text-primary transition-colors text-[#181111] dark:text-gray-200"
+                                href="Nosotros.html">Sobre Nosotros</a>
+                        </div>
+                    </div>
+                    <button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2">
+                        <span class="material-symbols-outlined text-3xl text-[#181111] dark:text-white">menu</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="fixed inset-0 z-[100] invisible transition-all duration-300">
+            <div id="menu-overlay"
+                class="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+
+            <div id="menu-panel"
+                class="absolute right-0 top-0 h-full w-[70%] max-w-[300px] bg-white dark:bg-[#1a0f0f] shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+                <div class="flex items-center justify-between p-6 border-b border-gray-100 dark:border-white/10">
+                    <img src="IMG/only-way_Rojo.png" alt="Logo" class="h-20 w-auto object-contain" />
+                    <button id="close-menu" class="p-2 text-gray-500">
+                        <span class="material-symbols-outlined text-2xl">close</span>
+                    </button>
+                </div>
+
+                <nav class="flex flex-col p-6 gap-4">
+                    <a class="flex items-center gap-4 text-xl font-bold text-[#181111] dark:text-white"
+                        href="index.html">
+                        <span class="material-symbols-outlined text-primary">home</span> Inicio
+                    </a>
+
+                    <div class="relative group">
+                        <button class="flex items-center gap-4 text-xl font-bold text-[#181111] dark:text-white">
+                            <span class="material-symbols-outlined text-primary">loyalty</span> Productos</button>
+
+                        <!-- Panel -->
+                        <div
+                            class="absolute left-0 mt-2 hidden w-40 rounded-md bg-background-light shadow-lg ring-1 ring-black/5 group-hover:block">
+                            <a href="Colección_Mujer.html"
+                                class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white">
+                                Colección Mujer
+
+                            </a>
+                            <a href="Colección_Hombre.html"
+                                class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white">
+                                Colección Hombre
+
+                            </a>
+                            <a href="Accesorios.html"
+                                class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white">
+                                Accesorios
+
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <a class="flex items-center gap-4 text-xl font-bold text-[#181111] dark:text-white"
+                        href="Nosotros.html">
+                        <span class="material-symbols-outlined text-primary">groups</span> Nosotros
+                    </a>
+
+                </nav>
+            </div>
+        </div>
+        <main class="flex-grow">
+             <div class="w-full max-w-[960px] mx-auto">
+                <div class="@container">
+                    <div class="@[480px]:p-0">
+                        <div class="relative flex min-h-[560px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-8 text-center overflow-hidden group shadow-xl"
+                            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%,rgba(0, 0, 0, 0.6) 100%),url('IMG/Athletics.jpg');">
+                            <div class="max-w-4xl mx-auto text-center space-y-6">
+                                <div
+                                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/30 text-white text-sm font-bold uppercase tracking-wider mb-2">
+                                    <span class="w-2 h-2 rounded-full bg-online animate-pulse"></span>
+                                    ESTAMOS AQUI PARA TI
+                                </div>
+                                <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-white">
+                                    Encuentra tu camino con
+                                    <span
+                                        class="text-primary underline decoration-4 underline-offset-4 decoration-primary/30">ONLY-WAY</span>
+                                </h1>
+                                <p class="text-lg md:text-xl text-white max-w-2xl mx-auto leading-relaxed">
+                                    ¿Tienes preguntas sobre nuestra ropa deportiva o uniformes
+                                    institucionales? ¿Quieres compartir tu experiencia? Estamos aquí
+                                    para escucharte y ayudarte a encontrar el estilo que mejor se
+                                    adapte a tu equipo, tu empresa o tu ritmo personal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+     <div class="max-w-[1400px] mx-auto px-6 py-12 lg:py-20">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+            <div class="space-y-8 lg:sticky lg:top-32">
+                <div class="space-y-2">
+                    <h3 class="text-3xl font-bold">Información de Contacto</h3>
+                    <p class="text-slate-500 dark:text-neutral-400">
+                        Comunícate directamente a través de cualquiera de estos
+                        canales
+                    </p>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <a class="group p-6 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+                        href="tel:8673-7311">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined">call</span>
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Teléfono</h4>
+                        <p class="text-sm text-slate-500 dark:text-neutral-400 mb-2">
+                            Lun-Vie de 8:00 am a 6:00 pm<br />
+                            Sáb de 9:00 am a 2:00 pm
+                        </p>
+                        <span
+                            class="font-medium text-slate-900 dark:text-white block group-hover:text-primary transition-colors">
+                            (+506) 8673-7311</span>
+                    </a>
+                    <a class="group p-6 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+                        href="mailto:amomos@hotmail.es">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Correo</h4>
+                        <p class="text-sm text-slate-500 dark:text-neutral-400 mb-2">
+                            Nuestro equipo está disponible para ayudarte.
+                        </p>
+
+                        <span
+                            class="font-medium text-slate-900 dark:text-white block group-hover:text-primary transition-colors truncate">amomos@hotmail.es</span>
+                    </a>
+                </div>
+                <a class="flex items-center justify-between p-6 rounded-2xl bg-[#25D366] text-white hover:bg-[#20bd5a] transition-colors shadow-lg shadow-green-500/20 group"
+                    href="https://wa.link/ob0zvz" target="_blank">
+                    <div class="flex items-center gap-4">
+                        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.231-.298.347-.497.116-.198.058-.372-.029-.545-.087-.174-.787-1.898-1.078-2.601-.285-.685-.576-.592-.792-.603-.205-.011-.44-.011-.673-.011-.233 0-.612.087-.932.434-.32.347-1.222 1.194-1.222 2.91 0 1.716 1.25 3.374 1.424 3.607.174.233 2.459 3.754 5.957 5.264 2.894 1.25 3.518.998 4.145.937.628-.06 2.022-.826 2.308-1.624.286-.798.286-1.482.201-1.624-.085-.142-.312-.223-.609-.372zM12 2C6.48 2 2 6.48 2 12c0 2.169.704 4.195 1.908 5.864L2.003 22l4.246-1.879C7.817 21.236 9.858 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z">
+                            </path>
+                        </svg>
+                        <div>
+                            <h4 class="font-bold text-lg">Escríbenos por WhatsApp</h4>
+                            <p class="text-white/90 text-sm">
+                                Nuestro equipo te responderá lo más pronto posible
+                            </p>
+                        </div>
+                    </div>
+                    <span
+                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <div
+                    class="rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800">
+                    <div class="p-6 pb-0 flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Nuestra tienda</h4>
+                            <p class="text-sm text-slate-500 dark:text-neutral-400">
+                                Ven a descubrir lo que hacemos.
+                            </p>
+                        </div>
+                        <div
+                            class="w-10 h-10 rounded-full bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-2">
+                        <p class="font-medium text-slate-900 dark:text-white leading-relaxed">
+                            Diag. 15, Provincia de Cartago, Cartago, Barrio San Blas
+                        </p>
+                    </div>
+                    <a class="h-48 w-full relative group cursor-pointer overflow-hidden"
+                        href="https://maps.app.goo.gl/ParhBniWLRSDZXVa7">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
+
+                        <iframe
+                            class="w-full h-full group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.4598713192127!2d-83.91547262638802!3d9.873572990225421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0df14f23376af%3A0x23fde3e089d285ae!2sOnly%20Way%20Ropa%20Deportiva!5e1!3m2!1ses-419!2scr!4v1768022084172!5m2!1ses-419!2scr"
+                            width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="absolute bottom-4 left-4 z-20 flex items-center gap-2 text-white">
+                            <span class="text-xs font-bold uppercase tracking-widest bg-primary px-2 py-1 rounded">Vista
+                                del mapa</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="bg-white dark:bg-neutral-900 rounded-[2.5rem] p-8 lg:p-12 shadow-2xl shadow-neutral-200/50 dark:shadow-black/50 border border-neutral-100 dark:border-neutral-800 relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none">
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-3xl font-bold mb-2">Envíanos tu mensaje</h3>
+                    <p class="text-slate-500 dark:text-neutral-400 mb-8">
+                        Te responderemos en menos de 24 horas.
+                    </p>
+                    <form id="Form_Email" class="space-y-6">
+                        <div id="Alert_msj" role="status" aria-live="polite" class="hidden rounded-md p-3 text-sm">
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold text-slate-700 dark:text-neutral-300 ml-1">Nombre
+                                    Completo</label>
+                                <div class="relative group">
+                                    <input id="FullName"
+                                        class="w-full rounded-xl border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800/50 px-5 py-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none placeholder:text-neutral-400 font-medium text-sm"
+                                        placeholder="Escribe tu nombre y apellido" type="text" />
+                                    <div
+                                        class="absolute inset-0 rounded-xl border border-transparent group-hover:border-primary/20 pointer-events-none transition-colors">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label
+                                    class="text-sm font-semibold text-slate-700 dark:text-neutral-300 ml-1">Correo</label>
+                                <div class="relative group">
+                                    <input id="Email"
+                                        class="w-full rounded-xl border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800/50 px-5 py-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none placeholder:text-neutral-400 font-normal text-sm"
+                                        placeholder="Escribe tu correo electrónico" type="email" />
+                                    <div
+                                        class="absolute inset-0 rounded-xl border border-transparent group-hover:border-primary/20 pointer-events-none transition-colors">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold text-slate-700 dark:text-neutral-300 ml-1">Número
+                                    telefónico</label>
+                                <div class="relative group">
+                                    <input id="PhoneUser"
+                                        class="w-full rounded-xl border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800/50 px-5 py-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none placeholder:text-neutral-400 font-medium"
+                                        placeholder="+506 8588-9449" type="tel" inputmode="numeric"
+                                        pattern="\d{8,15}" />
+                                    <div
+                                        class="absolute inset-0 rounded-xl border border-transparent group-hover:border-primary/20 pointer-events-none transition-colors">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold text-slate-700 dark:text-neutral-300 ml-1">Motivo
+                                    del Correo</label>
+                                <div class="relative">
+                                    <select id="OptionSubject"
+                                        class="w-full rounded-xl border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800/50 px-5 py-4 pr-10 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none appearance-none font-medium cursor-pointer">
+                                        <option disabled selected></option>
+                                        <option>Consulta general</option>
+                                        <option>Información de productos</option>
+                                        <option>Comentarios sobre los productos</option>
+                                        <option>
+                                            Consulta sobre uniformes
+                                            empresariales/institucionales
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label
+                                class="text-sm font-semibold text-slate-700 dark:text-neutral-300 ml-1">Mensaje</label>
+                            <textarea id="Message"
+                                class="w-full rounded-xl border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800/50 px-5 py-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none placeholder:text-neutral-400 font-medium resize-y min-h-[160px]"
+                                placeholder="Cuéntanos cómo podemos ayudarte..." rows="4"></textarea>
+                        </div>
+                        <div class="pt-4">
+                            <button
+                                class="w-full md:w-auto px-8 py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all duration-300 flex items-center justify-center gap-3 group"
+                                type="button" onclick="SendEmail()">
+                                <span>Enviar mensaje</span>
+                                <span
+                                    class="material-symbols-outlined group-hover:translate-x-1 transition-transform">send</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    </main>
+
+
+
+    <footer class="mt-auto border-t border-neutral-200 dark:border-neutral-800 py-3 bg-white dark:bg-neutral-900">
+        <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex flex-col gap-4">
+                <div class="flex items-center h-20 md:h-20 lg:h-24">
+                    <img src="IMG/only-way_Rojo.png" alt="Logo Only-Way" class="h-[120px] w-auto object-contain" />
+                </div>
+            </div>
+            <p class="text-neutral-400 text-sm font-medium">
+                © 2025 Only-Way Sportswear. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+    </div>
+    <script src="menu_movil.js"></script>
+    <script>
+        const input = document.getElementById("PhoneUser");
+        input.addEventListener("input", () => {
+            input.value = input.value.replace(/\D+/g, "");
+        });
+    </script>
+</body>
+
+</html>

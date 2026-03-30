@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Only-Way | Colección Mujer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+        <link rel="icon" href="IMG/ICON.png" type="image/png">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#9a1309",
+                        "background-light": "#fcf8f8",
+                        "background-dark": "#221110",
+                    },
+                    fontFamily: {
+                        display: ["Lexend", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: "Manrope", sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#1c0e0d] dark:text-[#fcf8f8] transition-colors duration-300">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Navigation -->
+            <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+                <nav id="main-nav"
+                    class="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-[#f5f0f0] dark:border-[#332222] h-20 flex items-center transition-all duration-300">
+                    <div class="flex justify-center w-full px-4 md:px-10 lg:px-40 py-3">
+                        <div class="flex w-full max-w-[960px] items-center justify-between">
+                            <div class="flex items-center h-20 md:h-20 lg:h-24">
+                                <img id="nav-logo" src="IMG/only-way_Rojo.png" alt="Logo Only-Way"
+                                    class="h-[120px] w-auto object-contain transition-all duration-300" />
+                            </div>
+
+                            <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                                <div class="flex items-center gap-6">
+                                    <a class="text-md font-medium hover:text-primary transition-colors text-[#181111] dark:text-gray-200"
+                                        href="index.html">Inicio</a>
+                                    <a class="text-md font-medium hover:text-primary transition-colors text-[#181111] dark:text-gray-200"
+                                        href="Nosotros.html">Sobre Nosotros</a>
+                                </div>
+                                <a class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-red-800 transition-colors text-white text-sm font-bold shadow-md"
+                                    href="Contacto.html"><span class="truncate">Contáctanos</span></a>
+                            </div>
+                            <button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2">
+                                <span
+                                    class="material-symbols-outlined text-3xl text-[#181111] dark:text-white">menu</span>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+                <div id="mobile-menu" class="fixed inset-0 z-[100] invisible transition-all duration-300">
+                    <div id="menu-overlay"
+                        class="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+                    </div>
+
+                    <div id="menu-panel"
+                        class="absolute right-0 top-0 h-full w-[70%] max-w-[300px] bg-white dark:bg-[#1a0f0f] shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+                        <div
+                            class="flex items-center justify-between p-6 border-b border-gray-100 dark:border-white/10">
+                            <img src="IMG/only-way_Rojo.png" alt="Logo" class="h-20 w-auto object-contain" />
+                            <button id="close-menu" class="p-2 text-gray-500">
+                                <span class="material-symbols-outlined text-2xl">close</span>
+                            </button>
+                        </div>
+
+                        <nav class="flex flex-col p-6 gap-4">
+                            <a class="flex items-center gap-4 text-xl font-bold text-[#181111] dark:text-white"
+                                href="index.html">
+                                <span class="material-symbols-outlined text-primary">home</span> Inicio
+                            </a>
+                            <div class="relative group">
+                                <button
+                                    class="flex items-center gap-4 text-xl font-bold text-[#181111] dark:text-white">
+                                    <span class="material-symbols-outlined text-primary">loyalty</span>
+                                    Productos</button>
+
+                                <!-- Panel -->
+                                <div
+                                    class="absolute left-0 mt-2 hidden w-40 rounded-md bg-background-light shadow-lg ring-1 ring-black/5 group-hover:block">
+                                    <a href="Colección_Mujer.html"
+                                        class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white">
+                                        Colección Mujer
+
+                                    </a>
+                                    <a href="Colección_Hombre.html"
+                                        class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white">
+                                        Colección Hombre
+
+                                    </a>
+                                    <a href="Accesorios.html"
+                                        class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white">
+                                        Accesorios
+
+                                    </a>
+
+                                </div>
+                            </div>
+                            <a class="flex items-center gap-4 text-xl font-bold text-[#181111] dark:text-white"
+                                href="Nosotros.html">
+                                <span class="material-symbols-outlined text-primary">groups</span> Nosotros
+                            </a>
+                            <a class="flex items-center justify-center bg-primary text-white py-4 rounded-xl font-bold shadow-lg mt-4"
+                                href="Contacto.html">
+                                Contáctanos
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Hero Section -->
+                <div class="flex-1 flex items-center justify-center py-10 px-10">
+                    <div class="max-w-[1200px] w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-2xl"
+                            style='background-image: url("IMG/Accessories.png");'>
+                        </div>
+                        <div class="flex flex-col gap-6 lg:pl-6">
+                            <div class="flex flex-col gap-3">
+                                <span class="text-primary font-bold tracking-[0.3em] uppercase text-xs">COLECCIÓN
+                                    ACCESORIOS</span>
+                                <h1
+                                    class="text-5xl lg:text-7xl font-black leading-[0.9] tracking-[-0.04em] text-primary uppercase">
+                                    ACCESORIOS QUE TE ACOMPAÑAN
+                                </h1>
+                            </div>
+                            <p
+                                class="text-lg font-light leading-relaxed max-w-md opacity-80 border-l-2 border-primary/20 pl-6">
+                                Accesorios diseñados con precisión para acompañar cada entrenamiento. Resistencia y
+                                practicidad en cada detalle.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-primary/5 py-16 px-10 border-y border-primary/10">
+                    <div class="max-w-[1000px] mx-auto grid grid-cols-3 gap-12">
+                        <div class="flex flex-col items-center text-center gap-4">
+                            <div
+                                class="size-16 rounded-full border border-primary/20 flex items-center justify-center bg-white">
+                                <span class="material-symbols-outlined text-primary text-2xl">texture</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold uppercase text-[11px] tracking-[0.2em] mb-1">MATERIAL PREMIUM</h4>
+                                <p class="text-[13px] font-light opacity-60">Resistentes al uso intenso</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center text-center gap-4">
+                            <div
+                                class="size-16 rounded-full border border-primary/20 flex items-center justify-center bg-white">
+                                <span class="material-symbols-outlined text-primary text-2xl">hardware</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold uppercase text-[11px] tracking-[0.2em] mb-1">CONSTRUCCIÓN ROBUSTA</h4>
+                                <p class="text-[13px] font-light opacity-60">Hechos para durar</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center text-center gap-4">
+                            <div
+                                class="size-16 rounded-full border border-primary/20 flex items-center justify-center bg-white">
+                                <span class="material-symbols-outlined text-primary text-2xl">grid_view</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold uppercase text-[11px] tracking-[0.2em] mb-1">DISEÑO FUNCIONAL</h4>
+                                <p class="text-[13px] font-light opacity-60">Estética limpia y práctica</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Minimalist Footer -->
+                <footer
+                    class="mt-auto border-t border-neutral-200 dark:border-neutral-800 py-3 bg-white dark:bg-neutral-900">
+                    <div
+                        class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center h-20 md:h-20 lg:h-24">
+                                <img src="IMG/only-way_Rojo.png" alt="Logo Only-Way"
+                                    class="h-[120px] w-auto object-contain" />
+                            </div>
+                        </div>
+                        <p class="text-neutral-400 text-sm font-medium">
+                            © 2025 Only-Way Sportswear. Todos los derechos reservados.
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+      <script src="menu_movil.js"></script>
+</body>
+
+</html>

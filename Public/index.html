@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Only-Way Sportswear</title>
+  <link rel="preload" as="image" href="IMG/IMG_Principal.png">
+  <link rel="icon" href="IMG/ICON.png" type="image/png">
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet" />
+  <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#9a1309",
+            "background-light": "#f8f6f5",
+          },
+          fontFamily: {
+            display: ["Lexend", "sans-serif"],
+            body: ["Noto Sans", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Ocultar barra de scroll en el carrusel pero permitir funcionalidad */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light text-[#181111] dark:text-white font-display">
+  <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+    <nav id="main-nav"
+      class="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-[#f5f0f0] dark:border-[#332222] h-20 flex items-center transition-all duration-300">
+      <div class="flex justify-center w-full px-4 md:px-10 lg:px-40 py-3">
+        <div class="flex w-full max-w-[960px] items-center justify-between">
+          <div class="flex items-center h-20 md:h-20 lg:h-24">
+            <img id="nav-logo" src="IMG/only-way_Rojo.png" alt="Logo Only-Way"
+              class="h-[120px] w-auto object-contain transition-all duration-300" />
+          </div>
+
+          <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+            <div class="flex items-center gap-6">
+              <a class="text-md font-medium hover:text-primary transition-colors text-[#181111] dark:text-gray-200"
+                href="#Colección">Productos</a>
+              <a class="text-md font-medium hover:text-primary transition-colors text-[#181111] dark:text-gray-200"
+                href="Nosotros.html">Sobre Nosotros</a>
+            </div>
+            <a class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-red-800 transition-colors text-white text-sm font-bold shadow-md"
+              href="Contacto.html"><span class="truncate">Contáctanos</span></a>
+          </div>
+          <button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2">
+            <span class="material-symbols-outlined text-3xl text-[#181111] dark:text-white">menu</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="fixed inset-0 z-[100] invisible transition-all duration-300">
+      <div id="menu-overlay"
+        class="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+
+      <div id="menu-panel"
+        class="absolute right-0 top-0 h-full w-[70%] max-w-[300px] bg-white dark:bg-[#1a0f0f] shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <div class="flex items-center justify-between p-6 border-b border-gray-100 dark:border-white/10">
+          <img src="IMG/only-way_Rojo.png" alt="Logo" class="h-20 w-auto object-contain" />
+          <button id="close-menu" class="p-2 text-gray-500">
+            <span class="material-symbols-outlined text-2xl">close</span>
+          </button>
+        </div>
+
+        <nav class="flex flex-col p-6 gap-4">
+          <a class="flex items-center gap-4 text-xl font-bold text-[#181111] dark:text-white" href="#Colección">
+            <span class="material-symbols-outlined text-primary">loyalty</span> Productos
+          </a>
+          <a class="flex items-center gap-4 text-xl font-bold text-[#181111] dark:text-white" href="Nosotros.html">
+            <span class="material-symbols-outlined text-primary">groups</span> Nosotros
+          </a>
+          <a class="flex items-center justify-center bg-primary text-white py-4 rounded-xl font-bold shadow-lg mt-4"
+            href="Contacto.html">
+            Contáctanos
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="flex flex-col justify-center px-4 md:px-10 lg:px-40 py-5">
+      <div class="w-full max-w-[960px] mx-auto">
+        <div class="@container">
+          <div class="@[480px]:p-0">
+            <div
+              class="relative flex min-h-[560px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-8 text-center overflow-hidden group shadow-xl"
+              style="
+                  background-image: linear-gradient(
+                      rgba(0, 0, 0, 0.4) 0%,
+                      rgba(0, 0, 0, 0.6) 100%
+                    ),
+                    url('IMG/IMG_Principal.png');
+                ">
+              <div class="flex flex-col gap-4 max-w-[700px] z-10 animate-fade-in-up">
+                <h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em] drop-shadow-sm">
+                  Only-Way: Define Tus Límites
+                </h1>
+                <h2 class="text-gray-200 text-base md:text-lg font-normal leading-relaxed">
+                  Ropa deportiva de alto rendimiento diseñada para atletas que
+                  buscan superar sus propias marcas. Calidad profesional,
+                  estilo inigualable.
+                </h2>
+              </div>
+              <div class="flex gap-4 z-10 mt-2">
+                <a class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-red-800 text-white text-base font-bold transition-all transform hover:scale-105 shadow-lg border border-transparent"
+                  href="#Colección">
+                  Ver Productos
+                </a>
+                <a class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-transparent hover:bg-white/10 text-white text-base font-bold transition-all border border-white backdrop-blur-sm"
+                  href="#about">
+                  Conócenos
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="scroll-mt-24" id="products">
+      <section class="flex flex-col justify-center px-4 md:px-10 lg:px-40 py-5">
+        <div class="w-full max-w-[960px] mx-auto">
+          <div class="flex flex-col gap-10 py-10">
+            <div class="flex flex-col gap-4">
+              <h1
+                class="text-[#181111] dark:text-white text-2xl md:text-4xl font-black leading-tight tracking-[-0.02em] max-w-[720px]">
+                Rendimiento Superior
+              </h1>
+              <p class="text-gray-600 dark:text-gray-300 text-lg font-normal leading-relaxed max-w-[720px]">
+                Ofrecemos una gran variedad de ropa deportiva diseñada para
+                mejorar tu rendimiento, resistencia y comodidad.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div
+                class="group flex flex-col gap-4 p-4 rounded-xl bg-white dark:bg-[#2a1a1a] border border-gray-100 dark:border-[#332222] shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-full h-48 bg-center bg-no-repeat bg-cover rounded-lg overflow-hidden relative"
+                  style="background-image: url('IMG/grupo_foto.JPG')">
+                  <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center justify-between">
+                    <p class="text-[#181111] dark:text-white text-lg font-bold">
+                      Ropa Deportiva
+                    </p>
+                    <span class="material-symbols-outlined text-primary">checkroom</span>
+                  </div>
+                  <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                    Prendas de calidad diseñadas para entrenar con comodidad,
+                    estilo y máximo rendimiento cada día.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group flex flex-col gap-4 p-4 rounded-xl bg-white dark:bg-[#2a1a1a] border border-gray-100 dark:border-[#332222] shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-full h-48 bg-center bg-no-repeat bg-cover rounded-lg overflow-hidden relative"
+                  style="background-image: url('IMG/Uniformes.jpg')">
+                  <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center justify-between">
+                    <p class="text-[#181111] dark:text-white text-lg font-bold">
+                      Uniformes
+                    </p>
+                    <span class="material-symbols-outlined text-primary">apparel</span>
+                  </div>
+                  <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                    Uniformes personalizados para empresas e instituciones,
+                    resistentes y cómodos.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group flex flex-col gap-4 p-4 rounded-xl bg-white dark:bg-[#2a1a1a] border border-gray-100 dark:border-[#332222] shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-full h-48 bg-center bg-no-repeat bg-cover rounded-lg overflow-hidden relative"
+                  style="background-image: url('IMG/botella.png')">
+                  <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center justify-between">
+                    <p class="text-[#181111] dark:text-white text-lg font-bold">
+                      Accesorios
+                    </p>
+                    <span class="material-symbols-outlined text-primary">fitness_center</span>
+                  </div>
+                  <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                    Todo lo que necesitas para tu rutina, desde binchas y
+                    viseras hasta paños y calentadores.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="flex flex-col justify-center px-4 md:px-10 lg:px-40 py-16 bg-white dark:bg-[#221110]">
+      <div class="w-full max-w-[960px] mx-auto" id="Colección">
+        <div class="flex flex-col gap-3 mb-12 text-center items-center">
+          <div class="flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-sm">
+            <span class="material-symbols-outlined text-lg">checkroom</span>
+            <span>Estilos</span>
+          </div>
+          <h2 class="text-[#181111] dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.02em]">
+            Colecciones Destacadas
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 text-lg max-w-2xl font-normal leading-relaxed">
+            Descubre las últimas tendencias en equipamiento deportivo
+            diseñadas para potenciar tu mejor versión.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <a class="group relative h-[500px] rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300"
+            href="Colección_Hombre.html">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+              style="background-image: url('IMG/Modelo_Hombre.png')"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div
+              class="absolute bottom-0 left-0 p-8 flex flex-col gap-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+              <h3 class="text-white text-2xl font-bold">Hombres</h3>
+              <p
+                class="text-white/90 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                Rendimiento y confort se unen.
+              </p>
+              <div
+                class="flex items-center gap-2 text-white font-bold text-sm uppercase tracking-wider group/btn w-fit">
+                <span class="border-b-2 border-primary pb-0.5">Ver Outfit</span>
+                <span
+                  class="material-symbols-outlined text-lg group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+              </div>
+            </div>
+          </a>
+          <a class="group relative h-[500px] rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300"
+            href="Colección_Mujer.html">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+              style="background-image: url('IMG/modelo_mujer.png')"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div
+              class="absolute bottom-0 left-0 p-8 flex flex-col gap-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+              <h3 class="text-white text-2xl font-bold">Mujeres</h3>
+              <p
+                class="text-white/90 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                Diseños que inspiran movimiento.
+              </p>
+              <div
+                class="flex items-center gap-2 text-white font-bold text-sm uppercase tracking-wider group/btn w-fit">
+                <span class="border-b-2 border-primary pb-0.5">Ver Outfit</span>
+                <span
+                  class="material-symbols-outlined text-lg group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+              </div>
+            </div>
+          </a>
+          <a class="group relative h-[500px] rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300"
+            href="Accesorios.html">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+              style="background-image: url('IMG/Accessories.png')"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div
+              class="absolute bottom-0 left-0 p-8 flex flex-col gap-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+              <h3 class="text-white text-2xl font-bold">Accesorios</h3>
+              <p
+                class="text-white/90 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                Equipamiento esencial para completar tu rutina.
+              </p>
+              <div
+                class="flex items-center gap-2 text-white font-bold text-sm uppercase tracking-wider group/btn w-fit">
+                <span class="border-b-2 border-primary pb-0.5">Ver Colección</span>
+                <span
+                  class="material-symbols-outlined text-lg group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="scroll-mt-24" id="testimonials">
+      <div class="relative bg-center bg-cover bg-no-repeat" style="
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)
+              ),
+              url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1B24a76rqr49xXn7ZHM88CdIDv_rzzT5YyQ7LUKAJ-nRaZS6b32ZTNzEBAFd0tmecYCERhVOPT3SqGS6jHA7_WNZ5-FUSX6qeZtwdHac5FbbaMY6aXWU9TxcSDKIibrepy6puwx7_YJ7USN2bWsMVVzrMakSGdAcKZoL-evVfOp1QSxCDVMLCnG-KC7JojtFA5W7W6gL-6Zel5JQMrTMkM-2mAW8Q_4RgN6ZLMPUnMO3KSz1-GkskNlnm5-sdxIZrfC3Ppj6h2vU');
+          ">
+        <section class="flex flex-col justify-center px-4 md:px-10 lg:px-40 py-24">
+          <div class="w-full max-w-[1200px] mx-auto">
+            <div id="header-info" class="flex flex-col items-center justify-center text-center mb-12 text-white">
+              <p class="text-white animate-pulse">Cargando opiniones...</p>
+            </div>
+
+            <div class="relative group">
+              <button onclick="moveCarousel(-1)"
+                class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 bg-white/10 hover:bg-white backdrop-blur-md shadow-lg rounded-full text-white hover:text-primary flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 cursor-pointer border border-white/20">
+                <span class="material-symbols-outlined">chevron_left</span>
+              </button>
+
+              <div id="google-reviews-container"
+                class="flex overflow-x-auto gap-6 pb-8 px-4 snap-x snap-mandatory scrollbar-hide scroll-smooth"></div>
+
+              <button onclick="moveCarousel(1)"
+                class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 bg-white/10 hover:bg-white backdrop-blur-md shadow-lg rounded-full text-white hover:text-primary flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 cursor-pointer border border-white/20">
+                <span class="material-symbols-outlined">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="scroll-mt-24" id="about">
+      <section class="flex flex-col justify-center px-4 md:px-10 lg:px-40 py-16">
+        <div class="w-full max-w-[960px] mx-auto">
+          <div class="flex flex-col md:flex-row gap-12 items-center">
+            <div class="flex-1 flex flex-col gap-6">
+              <div class="flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-sm">
+                <span class="material-symbols-outlined text-lg">history_edu</span>
+                <span>Nuestra Historia</span>
+              </div>
+              <h2 class="text-3xl md:text-4xl font-bold text-[#181111] dark:text-white leading-tight">
+                Pasión por el Deporte, Compromiso con la Calidad
+              </h2>
+              <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                <p>
+                  Only-Way nació de una idea simple: el equipamiento deportivo
+                  no debería ser un lujo, sino una herramienta accesible para
+                  todos los que desean superarse. Fundada en 2013, comenzamos
+                  como una pequeña tienda local y hoy somos un referente para
+                  atletas de todas las disciplinas.
+                </p>
+                <p>
+                  Creemos que el "único camino" (Only-Way) es el de la
+                  constancia y el esfuerzo. Por eso, seleccionamos
+                  meticulosamente cada material y diseño para asegurar que
+                  nuestros productos resistan tus entrenamientos más duros.
+                </p>
+              </div>
+              <div class="pt-4 flex gap-8">
+                <div>
+                  <h3 class="text-3xl font-black text-primary">13+</h3>
+                  <p class="text-sm text-gray-500 font-medium">
+                    Años de experiencia
+                  </p>
+                </div>
+                <div>
+                  <h3 class="text-3xl font-black text-primary">5k+</h3>
+                  <p class="text-sm text-gray-500 font-medium">
+                    Clientes Felices
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 w-full">
+              <div
+                class="relative rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 ease-out">
+                <div class="w-full aspect-[4/5] bg-cover bg-center" style="background-image: url('IMG/run.jpg')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+                  <p class="text-white font-medium text-lg">
+                    "Nuestra meta es ayudarte a alcanzar la tuya."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="bg-primary text-white py-16 px-4 md:px-10 lg:px-40">
+      <div class="max-w-[960px] mx-auto text-center flex flex-col items-center gap-6">
+        <h2 class="text-3xl font-bold">
+          ¿Listo para mejorar tu rendimiento?
+        </h2>
+        <p class="text-white/80 max-w-xl">
+          Visítanos en nuestra tienda física o contáctanos para asesoría
+          personalizada.
+        </p>
+        <a class="bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-lg shadow-lg transition-colors flex items-center gap-2"
+          href="Contacto.html">
+          <span class="material-symbols-outlined">mail</span>
+          Contáctanos Ahora
+        </a>
+      </div>
+    </section>
+
+    <footer class="bg-[#181111] text-white py-12 px-4 md:px-10 lg:px-40 border-t border-white/10">
+      <div class="max-w-[960px] mx-auto flex flex-col md:flex-row justify-between gap-10">
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center h-20 md:h-20 lg:h-24">
+            <img src="IMG/only-way(Logo).png" alt="Logo Only-Way" class="h-[120px] w-auto object-contain" />
+          </div>
+          <p class="text-gray-400 text-sm max-w-xs">
+            Tu aliado en cada paso, repetición y meta cumplida.
+          </p>
+        </div>
+        <div class="flex gap-16 flex-wrap">
+          <div class="flex flex-col gap-3">
+            <h4 class="font-bold text-sm uppercase tracking-wider text-gray-300">
+              Enlaces
+            </h4>
+            <a class="text-gray-400 hover:text-white text-sm" href="#">Inicio</a>
+            <a class="text-gray-400 hover:text-white text-sm" href="#Colección">Productos</a>
+            <a class="text-gray-400 hover:text-white text-sm" href="Nosotros.html">Nosotros</a>
+          </div>
+          <div class="flex flex-col gap-3">
+            <h4 class="font-bold text-sm uppercase tracking-wider text-gray-300">
+              Contacto
+            </h4>
+            <div class="flex items-center gap-2 text-gray-400 text-sm">
+              <span class="material-symbols-outlined text-base">location_on</span>
+              <span><a href="https://maps.app.goo.gl/1iaRTUjGQaCw5nCZ7">Diag. 15, Provincia de Cartago</a></span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400 text-sm">
+              <span class="material-symbols-outlined text-base">call</span>
+              <span>8673-7311</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400 text-sm">
+              <span class="material-symbols-outlined text-base">email</span>
+              <span><a href="mailto:amomos@hotmail.es">amomos@hotmail.es</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-[960px] mx-auto mt-12 pt-8 border-t border-white/10 text-center md:text-left text-gray-500 text-xs flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>© 2025 Only-Way Sportswear. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </div>
+  <script src="menu_movil.js"></script>
+  <script src="info_place.js"></script>
+</body>
+
+</html>

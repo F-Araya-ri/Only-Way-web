@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Only-Way | Colección Hombre</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+        <link rel="icon" href="IMG/ICON.png" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#9a1309",
+                        "background-light": "#fcf8f8",
+                        "background-dark": "#221110",
+                    },
+                    fontFamily: {
+                        display: ["Lexend", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: "Manrope", sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#1c0e0d] dark:text-[#fcf8f8] transition-colors duration-300">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Navigation -->
+            <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+                <nav id="main-nav"
+                    class="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-[#f5f0f0] dark:border-[#332222] h-20 flex items-center transition-all duration-300">
+                    <div class="flex justify-center w-full px-4 md:px-10 lg:px-40 py-3">
+                        <div class="flex w-full max-w-[960px] items-center justify-between">
+                            <div class="flex items-center h-20 md:h-20 lg:h-24">
+                                <img id="nav-logo" src="IMG/only-way_Rojo.png" alt="Logo Only-Way"
+                                    class="h-[120px] w-auto object-contain transition-all duration-300" />
+                            </div>
+
+                            <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                                <div class="flex items-center gap-6">
+                                    <a class="text-md font-medium hover:text-primary transition-colors text-[#181111] dark:text-gray-200"
+                                        href="index.html">Inicio</a>
+                                    <a class="text-md font-medium hover:text-primary transition-colors text-[#181111] dark:text-gray-200"
+                                        href="Nosotros.html">Sobre Nosotros</a>
+                                </div>
+                                <a class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-red-800 transition-colors text-white text-sm font-bold shadow-md"
+                                    href="Contacto.html"><span class="truncate">Contáctanos</span></a>
+                            </div>
+                            <button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2">
+                                <span
+                                    class="material-symbols-outlined text-3xl text-[#181111] dark:text-white">menu</span>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+                <div id="mobile-menu" class="fixed inset-0 z-[100] invisible transition-all duration-300">
+                    <div id="menu-overlay"
+                        class="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+                    </div>
+
+                    <div id="menu-panel"
+                        class="absolute right-0 top-0 h-full w-[70%] max-w-[300px] bg-white dark:bg-[#1a0f0f] shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+                        <div
+                            class="flex items-center justify-between p-6 border-b border-gray-100 dark:border-white/10">
+                            <img src="IMG/only-way_Rojo.png" alt="Logo" class="h-20 w-auto object-contain" />
+                            <button id="close-menu" class="p-2 text-gray-500">
+                                <span class="material-symbols-outlined text-2xl">close</span>
+                            </button>
+                        </div>
+
+                        <nav class="flex flex-col p-6 gap-4">
+                            <a class="flex items-center gap-4 text-xl font-bold text-[#181111] dark:text-white"
+                                href="index.html">
+                                <span class="material-symbols-outlined text-primary">home</span> Inicio
+                            </a>
+                            <div class="relative group">
+                        <button class="flex items-center gap-4 text-xl font-bold text-[#181111] dark:text-white">
+                            <span class="material-symbols-outlined text-primary">loyalty</span> Productos</button>
+
+                        <!-- Panel -->
+                        <div
+                            class="absolute left-0 mt-2 hidden w-40 rounded-md bg-background-light shadow-lg ring-1 ring-black/5 group-hover:block">
+                            <a href="Colección_Mujer.html"
+                                class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white">
+                                Colección Mujer
+
+                            </a>
+                            <a href="Colección_Hombre.html"
+                                class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white">
+                                Colección Hombre
+
+                            </a>
+                            <a href="Accesorios.html"
+                                class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white">
+                                Accesorios
+
+                            </a>
+
+                        </div>
+                    </div>
+                            <a class="flex items-center gap-4 text-xl font-bold text-[#181111] dark:text-white"
+                                href="Nosotros.html">
+                                <span class="material-symbols-outlined text-primary">groups</span> Nosotros
+                            </a>
+                            <a class="flex items-center justify-center bg-primary text-white py-4 rounded-xl font-bold shadow-lg mt-4"
+                                href="Contacto.html">
+                                Contáctanos
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Hero Section -->
+                <div class="flex flex-1 justify-center py-5">
+                    <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                        <div class="@container">
+                            <div class="flex flex-col gap-10 px-4 py-12 @[864px]:flex-row @[864px]:items-center">
+                                <div class="w-full bg-center bg-no-repeat aspect-[4/5] @[864px]:aspect-square bg-cover rounded-xl shadow-2xl"
+                                    data-alt="Modern woman in sleek burgundy athletic wear stretching" style="
+                    background-image: url('IMG/img_HombreCollection.jpg');
+                  "></div>
+                                <div class="flex flex-col gap-8 @[480px]:min-w-[400px]">
+                                    <div class="flex flex-col gap-4 text-left">
+                                        <span
+                                            class="text-primary font-bold tracking-[0.2em] uppercase text-xs">COLECCIÓN
+                                            para Hombre</span>
+                                        <h1
+                                            class="text-4xl text-center font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl text-primary">
+                                            Diseño <br />y<br />Rendimiento
+                                        </h1>
+                                        <h2 class="text-lg font-light leading-relaxed max-w-md opacity-80">
+                                            Diseñamos pensando en tu fuerza, tu ritmo y tu determinación. Cada prenda
+                                            acompaña tu movimiento con precisión y comodidad, adaptándose a tu cuerpo
+                                            sin restricciones. Materiales que responden, cortes que potencian y un
+                                            diseño creado para rendir al máximo, dentro y fuera del entrenamiento.
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Philosophy Section -->
+                <div class="flex flex-1 justify-center py-16 bg-white dark:bg-[#1a0d0c]">
+                    <div class="layout-content-container flex flex-col max-w-[800px] flex-1">
+                        <h1
+                            class="text-primary tracking-tight text-[36px] font-extrabold leading-tight px-4 text-center pb-6">
+                            Diseñada para hombres que no se detienen
+                        </h1>
+                        <p class="text-base font-light leading-loose pb-3 pt-1 px-8 text-center opacity-90">
+                            En Only-Way diseñamos prendas deportivas masculinas que combinan comodidad, resistencia y
+                            desempeño. Cada pieza está pensada para acompañar el ritmo de tu entrenamiento y tu día a
+                            día, brindando el soporte y la libertad necesarios para rendir al máximo, ya sea en el
+                            gimnasio, al aire libre o en la rutina diaria.
+                        </p>
+                        <div class="flex justify-center mt-6">
+                            <span class="material-symbols-outlined text-primary text-3xl">exercise</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image Grid Narrative -->
+                <div class="flex flex-1 justify-center mt-10">
+                    <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+                            <div class="flex flex-col gap-6">
+                                <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
+                                    data-alt="Close up of high quality fabric texture and stitching" style="
+                    background-image: url('https://nickoftimefabric.com/cdn/shop/collections/image_cf8b4ac4-71a2-42a4-8d7f-c89dd3d5e05c_533x.jpg');
+                  "></div>
+                                <div class="px-2">
+                                    <h3 class="text-primary font-bold uppercase tracking-tighter text-lg">
+                                        CONFORT AVANZADO
+                                    </h3>
+                                    <p class="text-sm font-light opacity-70 mt-2">
+                                        Materiales de alta resistencia diseñados para soportar fricción y presión sin
+                                        perder forma ni rendimiento.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-6">
+                                <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl shadow-xl"
+                                    data-alt="Woman in professional yoga pose wearing athletic leggings"
+                                    style="background-image: url('IMG/img_comfort.jpg')"></div>
+                                <div class="px-2">
+                                    <h3 class="text-primary font-bold uppercase tracking-tighter text-lg">
+                                        Diseño pensado para el movimiento
+                                    </h3>
+                                    <p class="text-sm font-light opacity-70 mt-2">
+                                        Diseños equilibrados que brinda comodidad, control y rendimiento en cada
+                                        movimiento.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-6">
+                                <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl shadow-xl"
+                                    data-alt="Minimalist portrait of woman in sportswear in an urban setting" style="
+                    background-image: url('IMG/casual_Hombre.jpg');
+                  "></div>
+                                <div class="px-2">
+                                    <h3 class="text-primary font-bold uppercase tracking-tighter text-lg">
+                                        MÁS QUE DEPORTE
+                                    </h3>
+                                    <p class="text-sm font-light opacity-70 mt-2">
+                                        Ropa deportiva que se adapta a tu rutina, dentro y fuera del
+                                        entrenamiento.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Comfort/Performance Details -->
+                <div class="flex flex-1 justify-center py-20 border-t border-primary/5">
+                    <div class="layout-content-container flex flex-col max-w-[1200px] flex-1 px-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                            <div class="order-2 lg:order-1">
+                                <h2 class="text-3xl font-bold uppercase text-primary mb-6">
+                                    Diseñado para resistir
+                                </h2>
+                                <div class="space-y-8">
+                                    <div class="flex gap-4">
+                                        <span class="material-symbols-outlined text-primary">workspace_premium</span>
+                                        <div>
+                                            <h4 class="font-bold uppercase text-sm tracking-widest mb-1">
+                                                ALTA RESISTENCIA
+                                            </h4>
+                                            <p class="text-sm font-light opacity-70 leading-relaxed">
+                                                Materiales de alto rendimiento diseñados para soportar
+                                                el uso constante sin perder elasticidad ni forma.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <span class="material-symbols-outlined text-primary">air</span>
+                                        <div>
+                                            <h4 class="font-bold uppercase text-sm tracking-widest mb-1">
+                                                TECNOLOGÍA DE SECADO ACTIVO
+                                            </h4>
+                                            <p class="text-sm font-light opacity-70 leading-relaxed">
+                                                Material de secado rápido diseñado para controlar la humedad y brindar
+                                                mayor
+                                                confort en movimiento.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <span class="material-symbols-outlined text-primary">content_cut</span>
+                                        <div>
+                                            <h4 class="font-bold uppercase text-sm tracking-widest mb-1">
+                                                AJUSTE ERGONÓMICO
+                                            </h4>
+                                            <p class="text-sm font-light opacity-70 leading-relaxed">
+                                                Diseñado para adaptarse al movimiento natural del cuerpo, ofreciendo
+                                                comodidad y libertad en cada entrenamiento.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-1 lg:order-2">
+                                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                                    data-alt="Abstract macro shot of high-tech fabric fibers" style="
+                    background-image: url('https://m.media-amazon.com/images/I/71CuJnyv8FL._AC_UF1000,1000_QL80_.jpg');
+                  "></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Minimalist Footer -->
+                <footer
+                    class="mt-auto border-t border-neutral-200 dark:border-neutral-800 py-3 bg-white dark:bg-neutral-900">
+                    <div
+                        class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center h-20 md:h-20 lg:h-24">
+                                <img src="IMG/only-way_Rojo.png" alt="Logo Only-Way"
+                                    class="h-[120px] w-auto object-contain" />
+                            </div>
+                        </div>
+                        <p class="text-neutral-400 text-sm font-medium">
+                            © 2025 Only-Way Sportswear. Todos los derechos reservados.
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="menu_movil.js"></script>
+</body>
+
+</html>
