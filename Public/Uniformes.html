@@ -51,6 +51,8 @@
       html { scroll-behavior: auto; }
       .institution-marquee { overflow-x: auto !important; overflow-y: hidden !important; -webkit-overflow-scrolling: touch; -webkit-mask-image: none; mask-image: none; scrollbar-width: none; }
       .institution-marquee::-webkit-scrollbar { display: none; }
+      .institution-track { -webkit-animation: none !important; animation: none !important; will-change: auto; }
+      .institution-track > [aria-hidden="true"] { display: none; }
     }
   </style>
 </head>
@@ -136,7 +138,7 @@
         <p class="mb-3 text-[10px] font-bold uppercase tracking-[.2em] text-primary">Instituciones</p>
         <h2 id="institutions-title" class="text-[clamp(28px,4vw,40px)] font-bold uppercase leading-none tracking-[-.06em]">Instituciones que vestimos.</h2>
       </div>
-      <div class="institution-marquee overflow-hidden" aria-label="Carrusel autom&aacute;tico de instituciones" role="region">
+      <div class="institution-marquee overflow-hidden" aria-label="Carrusel autom&aacute;tico de instituciones" role="region" tabindex="0">
         <div class="institution-track flex w-max">
           <div class="flex shrink-0 gap-[14px] pr-[14px]">
             <div class="flex h-[126px] w-[202px] shrink-0 items-center justify-center border-0 bg-transparent p-[8px] sm:h-[142px] sm:w-[230px] sm:p-[10px]" aria-label="Logo de COVAO"><img class="mx-auto h-[104px] w-full max-w-[210px] object-contain sm:h-[118px]" src="IMG/Instituciones/covaoLogo.png" alt="Logo de COVAO" /></div>
