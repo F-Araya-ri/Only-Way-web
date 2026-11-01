@@ -43,16 +43,9 @@
     p[class~="text-[10px]"], p[class~="text-[11px]"], small { font-size: 12px; line-height: 1.5; }
     span:not(.material-symbols-outlined)[class~="text-[10px]"], span:not(.material-symbols-outlined)[class~="text-[11px]"], span:not(.material-symbols-outlined)[class~="text-xs"] { font-family: "Manrope", sans-serif; font-size: 12px; line-height: 1.5; }
     a[class~="text-[10px]"] { font-family: "Manrope", sans-serif; font-size: 11px; }
-    .institution-marquee { -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
-    @-webkit-keyframes institution-logo-drift { from { -webkit-transform: translateX(0); transform: translateX(0); } to { -webkit-transform: translateX(-50%); transform: translateX(-50%); } }
-    @keyframes institution-logo-drift { from { -webkit-transform: translateX(0); transform: translateX(0); } to { -webkit-transform: translateX(-50%); transform: translateX(-50%); } }
-    .institution-track { -webkit-animation: institution-logo-drift 34s linear infinite; animation: institution-logo-drift 34s linear infinite; will-change: transform; }
+    .institution-marquee { overflow: hidden; touch-action: pan-y; }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .institution-marquee { overflow-x: auto !important; overflow-y: hidden !important; -webkit-overflow-scrolling: touch; -webkit-mask-image: none; mask-image: none; scrollbar-width: none; }
-      .institution-marquee::-webkit-scrollbar { display: none; }
-      .institution-track { -webkit-animation: none !important; animation: none !important; will-change: auto; }
-      .institution-track > [aria-hidden="true"] { display: none; }
     }
   </style>
 </head>
@@ -138,7 +131,7 @@
         <p class="mb-3 text-[10px] font-bold uppercase tracking-[.2em] text-primary">Instituciones</p>
         <h2 id="institutions-title" class="text-[clamp(28px,4vw,40px)] font-bold uppercase leading-none tracking-[-.06em]">Instituciones que vestimos.</h2>
       </div>
-      <div class="institution-marquee overflow-hidden" aria-label="Carrusel autom&aacute;tico de instituciones" role="region" tabindex="0">
+      <div class="institution-marquee" aria-label="Carrusel autom&aacute;tico de instituciones" role="region">
         <div class="institution-track flex w-max">
           <div class="flex shrink-0 gap-[14px] pr-[14px]">
             <div class="flex h-[126px] w-[202px] shrink-0 items-center justify-center border-0 bg-transparent p-[8px] sm:h-[142px] sm:w-[230px] sm:p-[10px]" aria-label="Logo de COVAO"><img class="mx-auto h-[104px] w-full max-w-[210px] object-contain sm:h-[118px]" src="IMG/Instituciones/covaoLogo.png" alt="Logo de COVAO" /></div>
@@ -248,5 +241,36 @@
     </div>
   </footer>
   <script src="menu_movil.js"></script>
+  <script>
+    (() => {
+      const viewport = document.querySelector(".institution-marquee");
+      const track = viewport?.querySelector(".institution-track");
+      const firstSet = track?.firstElementChild;
+      if (!viewport || !track || !firstSet) return;
+
+      const pixelsPerSecond = 38;
+      let cycleWidth = firstSet.getBoundingClientRect().width;
+      let lastFrameTime = 0;
+
+      function advance(now) {
+        if (document.hidden) {
+          lastFrameTime = 0;
+          requestAnimationFrame(advance);
+          return;
+        }
+
+        cycleWidth = firstSet.getBoundingClientRect().width || cycleWidth;
+        if (lastFrameTime && cycleWidth > 0) {
+          const elapsed = Math.min(now - lastFrameTime, 50);
+          viewport.scrollLeft += (pixelsPerSecond * elapsed) / 1000;
+          while (viewport.scrollLeft >= cycleWidth) viewport.scrollLeft -= cycleWidth;
+        }
+        lastFrameTime = now;
+        requestAnimationFrame(advance);
+      }
+
+      requestAnimationFrame(advance);
+    })();
+  </script>
 </body>
 </html>
